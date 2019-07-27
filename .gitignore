@@ -1,14 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+.idea
 # dependencies
 /node_modules
-/public
-/src/algorithms
-/src/data-structures
-/src/playground
-/src/utils
+/src/.idea
+/public/src
 /.pnp
 .pnp.js
+*.iml
 
 # testing
 /coverage
