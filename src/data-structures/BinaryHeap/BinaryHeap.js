@@ -35,7 +35,7 @@ export default class BinaryHeap {
       ) {
         topChild = rightChild;
       }
-      if (topChild == index) {
+      if (topChild === index) {
         break;
       }
       this.swap(this.heap, index, topChild);

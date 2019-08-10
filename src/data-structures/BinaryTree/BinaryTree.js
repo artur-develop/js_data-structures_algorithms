@@ -155,10 +155,10 @@ export default class BinaryTree {
 
   remove(data) {
     const removeNode = function (node, data) {
-      if (node == null) {
+      if (node === null) {
         return null;
       }
-      if (data == node.data) {
+      if (data === node.data) {
         // У узла нет детей
         if (node.left === null && node.right === null) {
           return null;
@@ -172,7 +172,7 @@ export default class BinaryTree {
           return node.left;
         }
         // У узла двое детей
-        var current = node.right;
+        let current = node.right;
         while (current.left !== null) {
           current = current.left;
         }
