@@ -7,7 +7,7 @@ export default class BinaryHeap {
   add(value) {
     this.heap.push(value);  // добавляем значение в массив
     let i = this.heap.length - 1;
-    let parent = (i - 1) / 2;
+    let parent = (i - 1) / 2; // формула для поиска родителя
     while (i > 0 && this.heap[parent] < this.heap[i]) {
       this.swap(this.heap, i, parent);
       i = parent;
@@ -15,13 +15,14 @@ export default class BinaryHeap {
     }
   }
 
+  // Если в куче изменяется один из элементов, то она может перестать удовлетворять свойству упорядоченности. Для восстановления этого свойства служит процедура Heapify
   heapify(index) {
     let leftChild;
     let rightChild;
     let topChild;
     while (true) {
-      leftChild = 2 * index + 1;
-      rightChild = 2 * index + 2;
+      leftChild = 2 * index + 1;  // Первый ребенок
+      rightChild = 2 * index + 2; // Второй ребенок
       topChild = index;
       if (
         leftChild < this.heap.length &&
